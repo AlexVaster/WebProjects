@@ -12,16 +12,49 @@
         <h1 id="title">Survey Form</h1>
         <p id="description">Let us know what kind of fastfood you prefer</p>
         <form id="survey-form">
-            <label id="name-label"></label>
+            <p><label id="name-label"></label>
             Name: 
-            <input id="name" type="text" name="Name" placeholder="Enter your name" required>
-            <label id="email-label"></label>
+            <input id="name" type="text" name="Name" placeholder="Enter your name" required></p>
+            <p><label id="email-label"></label>
             Email:
-            <input id="email" type="email" name="Email" placeholder="Enter your email" required>
-            <label id="number-label"></label>
+            <input id="email" type="email" name="Email" placeholder="Enter your email" required></p>
+            <p><label id="number-label"></label>
             Age:
-            <input id="number" type="number" name="Number" placeholder="Age" required>
-            <div id="dropdown"></div>
+            <input id="number" type="number" name="Number" placeholder="Age" required></p>
+            <p>Which option best describes your current role?</p>
+            <select id="dropdown">
+                <option value="student">Student</option>
+                <option value="full-time-job">Full Time Job</option>
+                <option value="full-time-learner">Full Time Learner</option>
+                <option value="prefer-not-to-say">Prefer not to say</option>
+                <option value="other">Other</option>
+            </select>
+            <p>Which brand you prefer?</p>
+            <label>
+                <input name="fastfood" type="radio">KFC<br>
+                <input name="fastfood" type="radio">Mcdonalds<br>
+                <input name="fastfood" type="radio">Burgerking<br>
+                <input name="fastfood" type="radio">Other
+            </label>
+            <p>Why this?</p>
+            <select id="dropdown-2">
+                <option value="tasty">Tasty</option>
+                <option value="cook fast">Cook fast</option>
+                <option value="good atmosphere">Good atmosphere</option>
+                <option vlaue="other">Other</option>
+            </select>
+            <p>What we can improve?</p>
+            <label>
+                <p><input type="checkbox">More promotions and coupons</p>
+                <p><input type="checkbox">More friendly workers</p>
+                <p><input type="checkbox">Increase food quality</p>
+                <p><input type="checkbox">Menu variety</p>
+                <p><input type="checkbox">Change playlist indoors</p>
+                <p><input type="checkbox">THIS IS A COOKIE</p>
+                <p><input type="checkbox">Open more restaurants in my small city</p>
+            </label>
+            <p>Any Comments or suggestions?<textarea name="suggestions">Enter your comment here...</textarea></p>
+
         </form>
     </div>
 </body>
