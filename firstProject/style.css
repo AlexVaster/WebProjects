@@ -4,6 +4,7 @@
 }
 #subtitle {
   font-size: 26px;
+  text-align: center;
 }
 body {
   background-color: white;
@@ -39,23 +40,23 @@ body {
 li {
   padding-top: 10px;
 }
-blockquote {
+#quote-and-author {
   padding-top: 15px;
+  padding-bottom: 10px;
   text-align: center;
   border: 2px solid grey;
-  background-color: #e6e3da;
-  margin: 0vw 28vw 0vw 28vw;
   border-radius: 5px;
   box-shadow: 2px 2px gray;
+  background-color: #e6e3da;
 }
 #more-info {
   text-align: center;
   font-size: 18px;
 }
-#author {
+cite {
   margin-left: 30vw;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 22px;
 }
 #quote {
   font-family: "Source Sans Pro", sans-serif;
