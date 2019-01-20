@@ -12,15 +12,12 @@
         <h1 id="title">Survey Form</h1>
         <p id="description">Let us know what kind of fastfood you prefer</p>
         <form id="survey-form">
-            <p><label id="name-label"></label>
-            Name: 
-            <input id="name" type="text" name="Name" placeholder="Enter your name" required></p>
-            <p><label id="email-label"></label>
-            Email:
-            <input id="email" type="email" name="Email" placeholder="Enter your email" required></p>
-            <p><label id="number-label"></label>
-            Age:
-            <input id="number" type="number" name="Number" placeholder="Age" required></p>
+            <label id="name-label">Name:<input id="name" type="text" name="Name" placeholder="Enter your name" required>
+            </label> 
+            <label id="email-label">Email:<input id="email" type="email" name="Email" placeholder="Enter your email" required>
+            </label>
+            <label id="number-label">Age:<input id="number" type="number" name="Number" placeholder="Age" required min="16" max="100">
+            </label>
             <p>Which option best describes your current role?</p>
             <select id="dropdown">
                 <option value="student">Student</option>
@@ -45,15 +42,16 @@
             </select>
             <p>What we can improve?</p>
             <label>
-                <p><input type="checkbox">More promotions and coupons</p>
-                <p><input type="checkbox">More friendly workers</p>
-                <p><input type="checkbox">Increase food quality</p>
-                <p><input type="checkbox">Menu variety</p>
-                <p><input type="checkbox">Change playlist indoors</p>
-                <p><input type="checkbox">THIS IS A COOKIE</p>
-                <p><input type="checkbox">Open more restaurants in my small city</p>
+                <p><input type="checkbox" value="more-promo">More promotions and coupons</p>
+                <p><input type="checkbox" value="more-friendly">More friendly workers</p>
+                <p><input type="checkbox" value="incr-quality">Increase food quality</p>
+                <p><input type="checkbox" value="menu-variaety">Menu variety</p>
+                <p><input type="checkbox" value="change-playlist">Change playlist indoors</p>
+                <p><input type="checkbox" value="cookie">THIS IS A COOKIE</p>
+                <p><input type="checkbox" value="more-restaurants">Open more restaurants in my small city</p>
             </label>
             Any Comments or suggestions?<textarea name="suggestions" cols="30" rows="5" placeholder="Enter your comment here..."></textarea>
+            <input type="submit" value="Submit">
         </form>
     </div>
 </body>
