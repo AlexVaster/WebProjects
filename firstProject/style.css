@@ -1,8 +1,8 @@
-.title {
+#title {
   text-align: center;
   font-size: 30px;
 }
-.subtitle {
+#subtitle {
   font-size: 26px;
 }
 body {
@@ -20,7 +20,7 @@ body {
   margin: 0px 10px 0px 10px;
   border-radius: 5px;
 }
-main {
+#main {
   background-color: #e3e3e3;
   border-radius: 5px;
   margin: 30px 10px 50px 10px;
@@ -39,7 +39,7 @@ main {
 li {
   padding-top: 10px;
 }
-#quote-and-author {
+blockquote {
   padding-top: 15px;
   text-align: center;
   border: 2px solid grey;
