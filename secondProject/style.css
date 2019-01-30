@@ -1,15 +1,99 @@
 @import url(https://fonts.googleapis.com/css?family=Raleway:400,500);
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 html,body {
     font-family: 'Raleway', Helvetica, sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
-    background-color: #42C297;
+    background-color: rgb(142, 207, 238);
+    min-width: 320px;
 }
-#main {
+
+#title {
+    margin: 30px;
+}
+
+#form-outer {
+    background: #fff;
+    margin: 0 auto;
+    width: 80%;
+    border: 1px solid gainsboro;
     border-radius: 5px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin: 0 17vw 0 17vw;
-    background: white;
+    line-height: 1.6em;
+    max-width: 900px;
 }
+
+#main #form-outer #description {
+    padding: 30px;
+}
+
+#main #form-outer .row-tab {
+    padding: 10px 10px;
+}
+
+#main #form-outer .row-tab .left-tab {
+    display: inline-block;
+    text-align: right;
+    width: 45%;
+    margin-right: 2%;
+    vertical-align: top;
+}
+
+#main #form-outer .row-tab .right-tab {
+    display: inline-block;
+    width: 45%;
+    text-align: left;
+    vertical-align: middle;
+    margin-left: 2%;
+}
+
+#main #form-outer .row-first {
+    line-height: 2em; 
+}
+
+#main #form-outer .row-tab .right-tab #name, #email, #number {
+    width: 150px;
+    padding:8px;
+    border: 1px solid grey;
+    border-radius: 5px;
+}
+
+#main #form-outer .row-tab .right-tab ul li {
+    list-style: none;
+    
+}
+
+#main #form-outer .row-tab .right-tab ul li input[type="radio"],
+input[type="checkbox"] {
+    float: left;
+    margin-right: 5px;
+    margin-top: 10px;
+}
+
+#main #form-outer .row-tab .right-tab textarea {
+    width: 200px;
+}
+
+button {
+    color: #fff;
+    font-size: 20px;
+    padding: 10px 25px;
+    margin: 20px;
+    border: 1px solid rgb(120, 177, 139);
+    border-radius: 5px;
+    background-color: rgb(180, 226, 195); 
+
+}
+
+footer {
+    padding: 10px;
+}
+
+
+
+
