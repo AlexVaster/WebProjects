@@ -4,38 +4,161 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Hotel BT | Welcome</title>
-  <meta name="description" content="Welcome to the most extraordinary hotel in Boston">
-  <meta name="keywords" content="hotel,boston hotel,new england hotel">
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+  <title>Technical Documentation Page</title>
 </head>
 <body>
-  <header>
-    <nav id="navbar">
-      <div class="container">
-        <h1 class="logo">HBT</h1>
+<nav id="navbar">
+  <header>PHP Documentation</header>
+  <ul>
+    <a href="#What_is_PHP?" class="nav-link"><li>What is PHP?</li></a>
+    <a href="#What_can_PHP_do?" class="nav-link"><li>What can PHP do?</li></a>
+    <a href="#PHP_tags" class="nav-link"><li>PHP tags</li></a>
+    <a href="#Instruction_separation" class="nav-link"><li>Instruction separation</li></a>
+    <a href="#Comments" class="nav-link"><li>Comments</li></a>
+    <a href="#Introduction" class="nav-link"><li>Introduction</li></a>
+    <a href="#Variables_basics" class="nav-link"><li>Variables basics</li></a>
+    <a href="#Reference" class="nav-link"><li>Reference</li></a>
+  </ul>
+</nav>
+
+  <main id="main-doc">
+    <section class="main-section" id="What_is_PHP?">
+      <header>What is PHP?</header>
+      <article>
+        <p>PHP (recursive acronym for PHP: Hypertext 
+          Preprocessor) is a widely-used open source 
+          general-purpose scripting language that is 
+          especially suited for web development and 
+          can be embedded into HTML.</p>
+        <code>
+            &lt;?php<br>
+              echo "Hi, I'm a PHP script!";
+          ?&gt;
+        </code>  
+      <p>Instead of lots of commands to output HTML (as seen in C or Perl), PHP pages contain HTML with embedded code that does "something" (in this case, output "Hi, I'm a PHP script!"). The PHP code is enclosed in special start and end processing instructions &lt;?php and ?&gt; that allow you to jump into and out of "PHP mode."</p> 
+    </article> 
+    </section>
+    <section class="main-section" id="What_can_PHP_do?">
+      <header>What can PHP do?</header>
+      <article>
+        <p>Anything. PHP is mainly focused on server-side scripting, so you can do anything any other CGI program can do, such as collect form data, generate dynamic page content, or send and receive cookies. But PHP can do much more.</p>
+        <p>There are three main areas where PHP scripts are used.</p>
         <ul>
-          <li>
-            <a class="current" href="index.html">Home</a>
-          </li>
-          <li>
-            <a href="about.html">About</a>
-          </li>
-          <li>
-            <a href="contact.html">Contact</a>
-          </li>
+          <li>Server-side scripting. This is the most traditional and main target field for PHP. You need three things to make this work: the PHP parser (CGI or server module), a web server and a web browser. You need to run the web server, with a connected PHP installation. You can access the PHP program output with a web browser, viewing the PHP page through the server. All these can run on your home machine if you are just experimenting with PHP programming. See the installation instructions section for more information.</li>
+          <li>Command line scripting. You can make a PHP script to run it without any server or browser. You only need the PHP parser to use it this way. This type of usage is ideal for scripts regularly executed using cron (on *nix or Linux) or Task Scheduler (on Windows). These scripts can also be used for simple text processing tasks. See the section about Command line usage of PHP for more information.</li>
+          <li>Writing desktop applications. PHP is probably not the very best language to create a desktop application with a graphical user interface, but if you know PHP very well, and would like to use some advanced PHP features in your client-side applications you can also use PHP-GTK to write such programs. You also have the ability to write cross-platform applications this way. PHP-GTK is an extension to PHP, not available in the main distribution. If you are interested in PHP-GTK, visit » its own website.</li>
         </ul>
-      </div>
-    </nav>
-    <div id="showcase">
-      <div id="container">
-        <div id="showcase-content">
-          <h1><span class="text-primary">Enjoy</span> Your Stay</h1>
-          <p class="lead">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolor, eligendi laboriosam. Repellendus officia harum eaque.</p>
-          <a class="btn" href="about.html">About Our Hotel</a>
-        </div>
-      </div>
-    </div>
-  </header>
+      </article>
+    </section>
+    <section class="main-section" id="PHP_tags">
+      <header>PHP tags</header>
+      <article>
+        <p>When PHP parses a file, it looks for opening and closing tags, which are &lt;?php and ?&gt; which tell PHP to start and stop interpreting the code between them. Parsing in this manner allows PHP to be embedded in all sorts of different documents, as everything outside of a pair of opening and closing tags is ignored by the PHP parser.</p>
+        <p>PHP also allows for short open tag &lt;? (which is discouraged since it is only available if enabled using the short_open_tag php.ini configuration file directive, or if PHP was configured with the --enable-short-tags option).</p>
+        <p>If a file contains only PHP code, it is preferable to omit the PHP closing tag at the end of the file. This prevents accidental whitespace or new lines being added after the PHP closing tag, which may cause unwanted effects because PHP will start output buffering when there is no intention from the programmer to send any output at that point in the script.</p>
+        <p>
+          <code>
+            &lt;?php <br>
+            echo "Hello world"; <br>
+            
+            // ... more code <br>
+            
+            echo "Last statement"; <br>
+            
+            // the script ends here with no PHP closing tag</code>
+        </p>
+      </article>
+    </section>
+    <section class="main-section" id="Instruction_separation">
+      <header >Instruction separation</header>
+      <article>
+        <p>As in C or Perl, PHP requires instructions to be terminated with a semicolon at the end of each statement. The closing tag of a block of PHP code automatically implies a semicolon; you do not need to have a semicolon terminating the last line of a PHP block. The closing tag for the block will include the immediately trailing newline if one is present.</p>
+        <p><code>
+          &lt;?php <br>
+          echo 'This is a test'; <br>
+      ?&gt; <br>
+      
+      &lt;?php echo 'This is a test' ?&gt; <br>
+      
+      &lt;?php echo 'We omitted the last closing tag'; <br>
+    </code></p>
+      </article>
+    </section>
+    <section class="main-section" id="Comments">
+      <header>Comments</header>
+      <article>
+        <p>PHP supports 'C', 'C++' and Unix shell-style (Perl style) comments. For example:</p>
+        <code>&lt;?php <br>
+            echo 'This is a test'; // This is a one-line c++ <br> style comment <br>
+            /* This is a multi line comment <br>
+               yet another line of comment */ <br>
+            echo 'This is yet another test'; <br>
+            echo 'One Final Test'; # This is a one-line <br>shell-style comment
+        ?&gt;</code>
+      </article>
+    </section>
+    <section class="main-section" id="Introduction">
+      <header>Introduction</header>
+      <article>
+        <p>PHP supports ten primitive types.</p>
+        <p>Four scalar types:</p>
+        <ul>
+          <li>boolean</li>
+          <li>integer</li>
+          <li>float (floating-point number, aka double)</li>
+          <li>string</li>
+        </ul>
+        <p>Four compound types:</p>
+        <ul>
+          <li>array</li>
+          <li>object</li>
+          <li>callable</li>
+          <li>iterable</li>
+        </ul>
+        <p>And finally two special types:</p>
+        <ul>
+          <li>resource</li>
+          <li>NULL</li>
+        </ul>
+        <p>This manual also introduces some pseudo-types for readability reasons:</p>
+        <ul>
+          <li>mixed</li>
+          <li>number</li>
+          <li>callback (aka callable)</li>
+          <li>array|object</li>
+          <li>void</li>
+        </ul>
+        <p>And the pseudo-variable $....</p>
+      </article>
+    </section>
+    <section class="main-section" id="Variables_basics">
+      <header>Variables basics</header>
+      <article>
+        <p>Variables in PHP are represented by a dollar sign followed by the name of the variable. The variable name is case-sensitive.</p>
+        <p>Variable names follow the same rules as other labels in PHP. A valid variable name starts with a letter or underscore, followed by any number of letters, numbers, or underscores. As a regular expression, it would be expressed thus: [a-zA-Z_\x7f-\xff][a-zA-Z0-9_\x7f-\xff]*</p>
+        <code>&lt;?php <br>
+            $var = 'Bob'; <br>
+            $Var = 'Joe'; <br>
+            echo "$var, $Var";      // outputs "Bob, Joe" <br>
+            
+            $4site = 'not yet';     // invalid; starts with a number <br>
+            $_4site = 'not yet';    // valid; starts with an underscore <br>
+            $täyte = 'mansikka';    // valid; 'ä' is (Extended) ASCII 228. <br>
+            ?&gt;</code>
+      </article>
+    </section>
+    <section class="main-section" id="Reference">
+      <header>Reference</header>
+      <article>
+        <p>All the documentation in this page is taken from <a href="http://php.net/manual/en/index.php">php.net</a></p>
+      </article>
+    </section>
+    <footer>
+        <p>Copyright &copy; 2019, Technical Documentation Page, All Rights Reserved</p>
+      </footer>
+  </main>
+  <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 </body>
 </html>
